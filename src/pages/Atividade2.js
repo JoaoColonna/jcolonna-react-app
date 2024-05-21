@@ -13,41 +13,33 @@ const Counter = () => {
   const [womenCount, setWomenCount] = useState(0);
 
   const handleIncrementMen = () => {
-    if (total === 0 && menCount === 0) {
-      return;
-    }
-
     setTotal(total + 1);
     setMenCount(menCount + 1);
   };
 
   const handleDecrementMen = () => {
     if (menCount > 0) {
+      setTotal(total - 1);
       setMenCount(menCount - 1);
-
-      if (total > 0) {
-        setTotal(total - 1);
-      }
     }
   };
 
   const handleIncrementWomen = () => {
-    if (total === 0 && womenCount === 0) {
-      return;
-    }
-
     setTotal(total + 1);
     setWomenCount(womenCount + 1);
   };
 
   const handleDecrementWomen = () => {
     if (womenCount > 0) {
+      setTotal(total - 1);
       setWomenCount(womenCount - 1);
-
-      if (total > 0) {
-        setTotal(total - 1);
-      }
     }
+  };
+
+  const handleClear = () => {
+    setTotal(0);
+    setMenCount(0);
+    setWomenCount(0);
   };
 
   return (
@@ -64,11 +56,7 @@ const Counter = () => {
             />
           </Col>
           <Col xs={12} md={6} className="text-center">
-            <Button className="btn btn-secondary mt-2" onClick={() => {
-              setTotal(0);
-              setMenCount(0);
-              setWomenCount(0);
-            }}>
+            <Button className="btn btn-secondary mt-2" onClick={handleClear}>
               Limpar
             </Button>
           </Col>
