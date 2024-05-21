@@ -39,6 +39,15 @@ export function TodoList(){
 export function Profile(){
   return (
     <>
+      <Card>
+        <Avatar
+          size={100}
+          person={{
+            name: "Goku",
+            imageId: "518mGnE"
+          }}
+        />
+      </Card>
       <img  
         src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/025.png"
         alt="Pikachu"
@@ -47,18 +56,34 @@ export function Profile(){
   )
 }
 
+export function getImageUrl(person, size = ''){
+  return (
+    'https://i.imgur.com/' + 
+    person.imageId + 
+    size + 
+    '.jpg'
+  );
+}
 export function Avatar({ person, size }){
-  const avatar = "https://i.imgur.com/7blqAe2.gif";
-  const alt = "Korra";
   return (
     <img 
       className="avatar"
-      src={avatar}
-      alt={alt}
-      width={100}
-      height={100}
+      src={getImageUrl(person)}
+      alt={person.name}
+      width={size}
+      height={size}
     />
   );
+}
+
+function Card({ children }){
+  return (
+    <>
+      <div className="card">
+        {children}
+      </div>
+    </>
+  )
 }
 
 function Gallery(){

@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
+import womanImage from '../assets/woman.png';
+import manImage from '../assets/man.png';
 
 const Counter = () => {
   const [total, setTotal] = useState(0);
@@ -64,7 +66,7 @@ const Counter = () => {
         <Row>
           <Col className="d-flex flex-column align-items-center">
             <Image
-              src="https://cdn-icons-png.freepik.com/512/4086/4086652.png"
+              src={manImage}
               className="img-thumbnail"
               style={{ maxWidth: '200px', maxHeight: '200px' }}
             />
@@ -91,7 +93,7 @@ const Counter = () => {
 
           <Col className="d-flex flex-column align-items-center">
             <Image
-              src="https://cdn-icons-png.freepik.com/512/4086/4086671.png"
+              src={womanImage}
               className="img-thumbnail"
               style={{ maxWidth: '200px', maxHeight: '200px' }}
             />
