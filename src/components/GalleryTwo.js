@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { sculptureList } from "./Data";
-import { Button, Card, Row, Col } from "react-bootstrap";
+import { Button, Card, Row, Col, Image } from "react-bootstrap";
 
 // import Image from "react-bootstrap";
 
@@ -21,6 +21,7 @@ export default function Gallery2() {
     }
 
     let sculpture = sculptureList[index];
+    console.log(sculpture);
     return (
         <>
           <Card style={{ padding: "2rem "}}>
@@ -46,10 +47,11 @@ export default function Gallery2() {
                         </Button>
                     </Col>
                     <Col>
-                        <Card.Img 
+                        <Image 
                             src={sculpture.url}
                             alt={sculpture.alt}
                         />
+                        <img src={sculpture.url} ></img>
                     </Col>
                     <Col>
                         {showMore && <p>{sculpture.description}</p>}
