@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Image, Row } from 'react-bootstrap';
 
 export default function Form3() {
     const [person, setPerson] = useState({
@@ -84,8 +84,8 @@ export default function Form3() {
                 {person.name}
                 <br />
                 (located in {person.artwork.city})
-            </p>
-            <img
+            </p> 
+            <Image
                 src={person.artwork.image}
                 alt={person.artwork.title}
             />

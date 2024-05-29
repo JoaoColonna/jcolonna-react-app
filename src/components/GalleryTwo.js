@@ -51,7 +51,6 @@ export default function Gallery2() {
                             src={sculpture.url}
                             alt={sculpture.alt}
                         />
-                        <img src={sculpture.url} ></img>
                     </Col>
                     <Col>
                         {showMore && <p>{sculpture.description}</p>}
