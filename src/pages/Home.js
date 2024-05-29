@@ -21,6 +21,8 @@ const Home = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/atividade-4">Atividade 4</NavDropdown.Item>
                 <NavDropdown.Divider />
+                <NavDropdown.Item href="/atividade-5">Atividade 5</NavDropdown.Item>
+                <NavDropdown.Divider />
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
